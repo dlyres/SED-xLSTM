@@ -2,28 +2,29 @@ function [result] = extract_channels_times(input_channels,input_times)
 
 rootpath = 'D:\Matlab\workspace\SSVEP\BETA\test\';
 
-% Creates a single sample merge folder in the root directory
+% Creates a single sample merge folder in the root directory.
 mkdir(strcat(rootpath,'SpecialChannelsAndTimes\'))
 for i=1:40
 
-    % Creates a label index folder
+    % Creates a label index folder.
     mkdir(strcat(rootpath,'SpecialChannelsAndTimes\', num2str(i)));
 
-    %拼接文件名
+    % concatenated file name.
     setname = strcat(rootpath, num2str(i), '_simple_situation.mat');
 
-    %导入数据
+    % Import data.
     EEG = load(setname);
 
-    %定义一个空的二维数组,存储单个样本
+    % Defines an empty two-dimensional array to store a single sample.
     sample = zeros(length(input_channels), length(input_times));
 
-    %将相同刺激类型的脑电数据组成单样本
+    % The EEG data of the same type of stimulation were grouped into a single sample.
     for j=1:220
         for k=1:length(input_channels)
             sample(k, :) = EEG.simple_situation(input_channels(k), input_times, j);
         end
-         %单样本单独存储一个文件
+        
+        % Single sample stored separately in a file
         save_name = strcat(num2str(j),'_sample.mat');
         save_path = strcat(rootpath, '\SpecialChannelsAndTimes\', num2str(i), '\');
         save([save_path, save_name],'sample');
