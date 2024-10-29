@@ -1,6 +1,4 @@
 function [] = extract_frequence(fre_points)
-%EXTRACT_FREQUENCE 此处显示有关此函数的摘要
-%   此处显示详细说明
 rootpath = 'D:\Matlab\workspace\SSVEP\BETA\test\';
 
 if fre_points == 1024
