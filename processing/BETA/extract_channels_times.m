@@ -2,11 +2,11 @@ function [result] = extract_channels_times(input_channels,input_times)
 
 rootpath = 'D:\Matlab\workspace\SSVEP\BETA\test\';
 
-%在根目录下创建单样本汇合文件夹
+% Creates a single sample merge folder in the root directory
 mkdir(strcat(rootpath,'SpecialChannelsAndTimes\'))
 for i=1:40
 
-    %创建标签索引文件夹
+    % Creates a label index folder
     mkdir(strcat(rootpath,'SpecialChannelsAndTimes\', num2str(i)));
 
     %拼接文件名
