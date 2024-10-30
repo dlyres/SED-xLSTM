@@ -37,7 +37,7 @@ if __name__ == '__main__':
     parser.add_argument('--num_classes', type=int, default=8)
     parser.add_argument('--batch-size', type=int, default=64)
     parser.add_argument('--model_name', type=str, default='SSGFormer')
-    parser.add_argument('--cross_validation', type=bool, default=True)
+    parser.add_argument('--cross_validation', type=bool, default=False)
     parser.add_argument('--num_fold', type=str, default='0.2')
 
     # different dataset needs to transform patch_size
