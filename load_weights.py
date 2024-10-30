@@ -20,7 +20,7 @@ def main(args):
 
     model = mk.make_model(args)
     model.load_state_dict(torch.load(f'{model_path}'))
-    total_test_loss, class_acc, total_acc, auc = evaluate(model=model,
+    total_test_loss, class_acc, total_acc, auc, itr = evaluate(model=model,
                                                      data_loader=test_dataloader,
                                                      device=device,
                                                      epoch=0,
