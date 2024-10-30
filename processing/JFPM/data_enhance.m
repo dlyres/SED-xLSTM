@@ -1,12 +1,12 @@
 function [] = data_enhance()
 
-%将4s的时间长度按1.5秒的时间窗口，步长为0.5s，进行滑动切分
+% The time length of 4s is followed by a 1.5-second time window with a step size of 0.5s for sliding segmentation.
 
 rootpath = 'D:\Matlab\workspace\SSVEP\JFPM\test\';
 
 folderName = strcat(rootpath,'SpecialChannelsAndTimes_FIR_DataEnhance\');
 
-%在根目录下创建单样本汇合文件夹
+% Creates a single sample merge folder in the root directory.
 mkdir(folderName);
 
 for i=1:12
