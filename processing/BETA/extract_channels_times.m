@@ -24,7 +24,7 @@ for i=1:40
             sample(k, :) = EEG.simple_situation(input_channels(k), input_times, j);
         end
         
-        % Single sample stored separately in a file
+        % Single sample stored separately in a file.
         save_name = strcat(num2str(j),'_sample.mat');
         save_path = strcat(rootpath, '\SpecialChannelsAndTimes\', num2str(i), '\');
         save([save_path, save_name],'sample');
