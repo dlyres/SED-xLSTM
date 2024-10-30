@@ -2,7 +2,7 @@ function [] = data_enhance(time_len)
 
 rootpath = 'D:\Matlab\workspace\SSVEP\Benchmark\test\';
 
-% Move 5s to a 1.5-second time window with a step size of 0.5s for sliding segmentation.
+% Move 3s to a 1.5-second time window with a step size of 0.5s for sliding segmentation.
 
 if time_len == 1.5
     folderName = strcat(rootpath,'SpecialChannelsAndTimes_FIR_DataEnhance\');
